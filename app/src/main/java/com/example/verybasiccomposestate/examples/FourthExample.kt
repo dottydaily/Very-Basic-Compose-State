@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -13,26 +17,39 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Counter() {
+fun FourthExample() {
     Column(
         modifier = Modifier
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(
-            space = 16.dp,
+            space = 8.dp,
             alignment = Alignment.CenterVertically,
-        ),
-    ) {
-        var count = 0
-
-        Text(
-            text = "The current count is $count",
-            fontSize = 32.sp
         )
-        Button(onClick = { count++ }) {
+    ) {
+        var count by remember {
+            mutableStateOf(0)
+        }
+        var anotherCount by remember {
+            mutableStateOf(0)
+        }
+
+        StatelessCounter(value = count, onValueChange = { count++ })
+        StatelessCounter(value = anotherCount, onValueChange = { anotherCount++ })
+    }
+}
+
+@Composable
+private fun StatelessCounter(value: Int, onValueChange: () -> Unit) {
+    Column {
+        Text(
+            text = "Value is $value",
+            fontSize = 24.sp
+        )
+        Button(onClick = onValueChange) {
             Text(
-                text = "Increases count by 1",
-                fontSize = 24.sp
+                "Increases value",
+                fontSize = 16.sp,
             )
         }
     }
@@ -40,6 +57,6 @@ fun Counter() {
 
 @Preview
 @Composable
-private fun PreviewCounter() {
-    Counter()
+fun PreviewFourthExample() {
+    FourthExample()
 }

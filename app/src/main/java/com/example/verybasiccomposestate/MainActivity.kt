@@ -10,7 +10,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.verybasiccomposestate.examples.CarAnimation
+import com.example.verybasiccomposestate.examples.CardViewExample
 import com.example.verybasiccomposestate.examples.Counter
+import com.example.verybasiccomposestate.examples.FourthExample
+import com.example.verybasiccomposestate.examples.StateHoistingViewModelExample
+import com.example.verybasiccomposestate.examples.ThirdExample
 import com.example.verybasiccomposestate.ui.theme.VeryBasicComposeStateTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +26,7 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colorScheme.background
             ) {
-                Counter()
+                Counter() // Change with your wanted example here
             }
         }
     }

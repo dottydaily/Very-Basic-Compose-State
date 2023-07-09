@@ -20,13 +20,14 @@
   - How it contain state from recomposition
     - It will store an state object in the initial composition. and return the stored value on the next recomposition phase.
   - What happen to the state in remember if the owner (composable function) has exited the composition?
+    - See SecondExample.kt
     - The stored object will be gone with the owner composition function which is exited the composition.
   - What happen to the state in remember if the app make a configuration changes?
     - The stored object will be gone. Please use rememberSavable
 
-## Q&A Is State in Compose always a mutable value? (Answer : No)
+## Q&A Is Remember function in Compose always use with a mutable value? (Answer : No) ThirdExample.kt
 
-## Stateful vs Stateless
+## Stateful vs Stateless (FourthExample.kt)
 
 - What is Stateful / Stateless (Stateful is Composable function that own state, Stateless is the opposite of Stateful)
   - Which one is better?
@@ -41,5 +42,6 @@
 ## Example
 
 - Card view
-- Car animation. (Sneak peak of how to do an Animation in Compose)
+- Car animation. (Sneak peak of how to do an Animation in Compose) (CarAnimation.kt)
 - Extra : State hosting in ViewModel
+- Extra : Convert LiveData to State.
