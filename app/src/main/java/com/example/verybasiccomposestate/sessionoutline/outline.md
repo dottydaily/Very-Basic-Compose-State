@@ -1,12 +1,10 @@
 # Session Outline : Very Basic Compose State
 
-- How Compose render UI? (Composition vs Recomposition)
+- How Compose render UI? (Composition vs Initial compositon vs Recomposition)
 - What is the "State" in Jetpack Compose?
 - How to write a State?
-  - Show example of the Composable function which isn't using State.
-  - Try using State without remember.
 
-## Q&A "Does Recomposition happen?"
+## Q&A "Does Recomposition happen?" (Answer : Yes)
 
 - Introduce "remember" function.
 - A little detail on remember
@@ -14,15 +12,18 @@
   - What happen to the state in remember if the owner (composable function) has exited the composition?
   - What happen to the state in remember if the app make a configuration changes?
 
+## Q&A Is Remember function in Compose always use with a mutable value?
+
 ## Stateful vs Stateless
 
-- What is Stateful / Stateless
+- What is Stateful / Stateless (Stateful is Composable function that own state, Stateless is the opposite of Stateful)
   - Which one is better?
   - How to convert Stateful to Stateless?
   - Explain what is this approach call?
 
-## Example
+## Example (In `answer` branch)
 
 - Card view
-- Car animation. (Sneak peak of how to do an Animation in Compose)
-- Extra : State hosting in ViewModel.
+- Car animation. (Sneak peak of how to do an Animation in Compose) (CarAnimation.kt)
+- Extra : State hosting in ViewModel
+- Extra : Convert LiveData to State.
