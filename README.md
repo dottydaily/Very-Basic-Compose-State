@@ -8,7 +8,7 @@
 - What is the "State" in Jetpack Compose?
 - How to write a State?
 
-### Q&A "Does Recomposition happen?" (Answer : Yes)
+### Q&A "Does Recomposition happen?"
 
 - Introduce "remember" function.
 - A little detail on remember
@@ -28,6 +28,6 @@
 ### Example (In `answer` branch)
 
 - Card view
-- Car animation. (Sneak peak of how to do an Animation in Compose) (CarAnimation.kt)
+- Car animation. (Sneak peak of how to do an Animation in Compose)
 - Extra : State hosting in ViewModel
 - Extra : Convert LiveData to State.
